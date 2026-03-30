@@ -2,8 +2,7 @@ name: Build APK
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   build:
@@ -16,10 +15,8 @@ jobs:
         with:
           flutter-version: '3.22.0'
 
-      - run: flutter pub get
-      - run: flutter build apk --release
+      - run: flutter create .
 
-      - uses: actions/upload-artifact@v3
-        with:
-          name: app-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+      - run: flutter pub get
+
+      - run: flutter build apk --release
