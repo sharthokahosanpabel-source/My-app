@@ -15,8 +15,6 @@ jobs:
         with:
           flutter-version: '3.22.0'
 
-      - run: flutter create .
-
       - run: flutter pub get
 
       - run: flutter build apk --release
