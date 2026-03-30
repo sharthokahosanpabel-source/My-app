@@ -1,0 +1,1 @@
+This is placeholder. Real android build files required.
